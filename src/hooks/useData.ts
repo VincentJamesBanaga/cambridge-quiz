@@ -11,7 +11,7 @@ const useData = () => {
       try {
         setLoading(true);
         const responseData = await fetch(
-          "https://s3.eu-west-2.amazonaws.com/interview.mock.data/payload.json"
+          "/api/interview.mock.data/payload.json"
         ).then((res) => res.json());
 
         setLoading(false);
