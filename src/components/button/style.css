@@ -1,0 +1,9 @@
+button.btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+button.btn:disabled > span {
+  color: #d6d6d6;
+}

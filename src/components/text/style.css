@@ -1,0 +1,17 @@
+span {
+  position: relative;
+  display: block;
+  color: #2699fb;
+}
+
+span.left {
+  text-align: left;
+}
+
+span.center {
+  text-align: center;
+}
+
+span.right {
+  text-align: right;
+}
