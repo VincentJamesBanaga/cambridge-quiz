@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://s3.eu-west-2.amazonaws.com/:path*"
+    }
+  ]
+}
