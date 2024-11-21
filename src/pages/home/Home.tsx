@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
   const {
     data: { name, heading, activities },
-    loading,
   } = useData();
 
   const headerElem = (
@@ -58,40 +57,28 @@ const Home = () => {
         </Button>
       }
     >
-      {loading ? (
-        <Text
-          style={{
-            textAlign: "center",
-            textTransform: "uppercase",
-            fontSize: "1rem",
-          }}
-        >
-          Loading...
-        </Text>
-      ) : (
-        <List
-          items={activities.map(({ activity_name, questions, order }) => {
-            return {
-              key: Math.random(),
-              label: (
-                <Link
-                  to={`/${order}/${"round_title" in questions[0] ? 1 : 0}/${1}`}
-                  style={{ textDecoration: "none" }}
+      <List
+        items={activities.map(({ activity_name, questions, order }) => {
+          return {
+            key: Math.random(),
+            label: (
+              <Link
+                to={`/${order}/${"round_title" in questions[0] ? 1 : 0}/${1}`}
+                style={{ textDecoration: "none" }}
+              >
+                <Text
+                  style={{
+                    textAlign: "center",
+                    textTransform: "uppercase",
+                  }}
                 >
-                  <Text
-                    style={{
-                      textAlign: "center",
-                      textTransform: "uppercase",
-                    }}
-                  >
-                    {activity_name}
-                  </Text>
-                </Link>
-              ),
-            };
-          })}
-        />
-      )}
+                  {activity_name}
+                </Text>
+              </Link>
+            ),
+          };
+        })}
+      />
     </Layout>
   );
 };

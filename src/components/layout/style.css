@@ -13,13 +13,13 @@ main.ly-main > footer {
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  min-height: 1.5rem;
 }
 
 main.ly-main > footer {
   border-top: 1px solid #f1f1f1;
   flex-direction: row;
   justify-content: space-evenly;
-  height: 1.5rem;
 }
 
 main.ly-main > section {
